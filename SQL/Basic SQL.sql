@@ -41,4 +41,7 @@ SELECT FirstName, LastName, Salary FROM employee
 SELECT FirstName, LastName, Salary
 	FROM employee
 	WHERE Salary <= 50000 AND Salary != 0
-    ORDER BY Salary;
+    ORDER BY Salary
+    LIMIT 5;
+    
+
