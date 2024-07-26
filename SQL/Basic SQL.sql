@@ -44,4 +44,38 @@ SELECT FirstName, LastName, Salary
     ORDER BY Salary
     LIMIT 5;
     
+-- =========================================================-- 
 
+UPDATE employee SET LastName = "Payre"
+WHERE EmpID = 6;
+
+SELECT FirstName, LastName FROM employee
+WHERE EmpID=6;
+
+SELECT COUNT(*) FROM employee;
+
+UPDATE employee SET Location = "Indore"
+WHERE EmpID=2;
+
+DELETE FROM employee 
+WHERE EmpID=5;
+
+DESC employee;
+
+ALTER TABLE employee MODIFY FirstName VARCHAR(25);
+ALTER TABLE employee MODIFY LastName VARCHAR(25);
+ALTER TABLE employee MODIFY FirstName VARCHAR(25) NOT NULL;
+ALTER TABLE employee MODIFY LastName VARCHAR(25) NOT NULL;
+
+ALTER TABLE employee ADD CityCode INT;
+ALTER TABLE employee DROP CityCode;
+ALTER TABLE employee ADD CityCode INT NOT NULL;
+
+SELECT * FROM employee;
+
+-- =================================================================
+
+SELECT COUNT(*) AS total FROM employee;
+SELECT MAX(Salary) AS max_salary FROM employee;
+SELECT MIN(Salary) AS min_salary FROM employee;
+SELECT SUM(Salary) AS totoal_cost FROM employee;
