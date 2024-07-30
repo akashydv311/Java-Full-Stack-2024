@@ -57,6 +57,51 @@ VALUES
 ("Naga Sai", "Sreedhar", "saisreedhar2001@gmail.com", "3564897654", '2024-02-10', 1, 14, "Youtube", "Virtusha", '2024-02-29', "Noida");
 
 SELECT * FROM Learners;
-DESC Learners;
 
-DROP TABLE Learners;
+-- Data analysis [ Employee, Course, Learners]
+-- 1. Give me the record of the employee getting highest salary
+DESC Employee;
+SELECT * FROM Employee;
+
+SELECT * FROM Employee
+ORDER BY Salary DESC
+LIMIT 1;  
+
+-- 2. Give me the record of the employee getting highest salary and age is bigger then 23
+ SELECT * FROM Employee
+ WHERE Age>23
+ ORDER BY Salary DESC;
+ 
+ -- 3. Display the number of enrollments in the website of the learners
+ SELECT COUNT(*) AS Number_Of_Enrollments FROM Learners;
+ 
+ -- 4. Display the number of enrollments for the course id 3
+ SELECT COUNT(*) AS SQL_Course FROM Learners
+ WHERE SelectedCourse=3;
+
+
+-- 5. Count the number of learners enrolled in the month of jan
+SELECT COUNT(*) AS STD_JAN FROM Learners 
+WHERE LearnerEnrollmentDate LIKE '%-01-%';
+
+
+SELECT * FROM Learners;
+-- 6. Update the jeevan data with year of experience as 1 and compney as Amazon
+UPDATE Learners
+SET YearsOfExp=2 , LearnerCompany='Amazon'
+WHERE LearnerID=5;
+
+
+-- 7. Count the number of companies where learners doing their job
+-- Count is count the non null entries in the table
+ 
+SELECT Count(LearnerCompany) FROM Learners;  
+
+
+
+
+
+
+
+
+
