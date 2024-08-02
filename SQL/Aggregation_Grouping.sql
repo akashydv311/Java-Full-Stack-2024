@@ -50,6 +50,10 @@ SELECT SourceOfJoinning, SUM(YearsOfExp)
 FROM learners
 GROUP BY SourceOfJoinning;
 
+SELECT * FROM Learners;
+
+
+
 
 
 
