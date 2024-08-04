@@ -137,15 +137,26 @@ CourseID INT AUTO_INCREMENT,
 CourseName VARCHAR(50) NOT NULL,
 CourseDuration DECIMAL(3,1) NOT NULL,
 CourseFee INT NOT NULL,
+Changed_AT TIMESTAMP DEFAULT NOW() ON UPDATE NOW(),
 PRIMARY KEY (CourseID)
 );
+
+DROP TABLE Course_Update;
 
 INSERT INTO Course_Update(CourseName, CourseDuration, CourseFee) 
 VALUES("DSA Interview Prepration", 3.4, 4999),
 ("Excal Mastrey", 2.1, 3000),
 ("SQL Complete Mastrey", 5.0, 6500);
 
+INSERT INTO Course_Update(CourseName, CourseDuration, CourseFee) VALUES("Object Oriented Programming", 1.4, 4999);
+
 SELECT * FROM Course_Update;
+
+-- UPDATE COMMAND
+
+UPDATE Course_Update SET CourseFee = 3600
+WHERE CourseID=4;
+
 
 
 
