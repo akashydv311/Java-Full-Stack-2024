@@ -80,9 +80,9 @@ LIMIT 1;
  WHERE SelectedCourse=3;
 
 
--- 5. Count the number of learners enrolled in the month of jan
+-- 5. Count the number of learners enrolled in the month of jan 21
 SELECT COUNT(*) AS STD_JAN FROM Learners 
-WHERE LearnerEnrollmentDate LIKE '%-01-%';
+WHERE LearnerEnrollmentDate LIKE '%-01-14%';
 
 
 SELECT * FROM Learners;
@@ -96,6 +96,7 @@ WHERE LearnerID=5;
 -- Count is count the non null entries in the table
  
 SELECT Count(LearnerCompany) FROM Learners;  
+
 
 
 
