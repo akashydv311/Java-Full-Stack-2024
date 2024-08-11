@@ -19,7 +19,6 @@ ON Employee.Location = Temp.Location;
 
 SELECT * FROM Employee;
 
-SHOW TABLES;
 
 
 
